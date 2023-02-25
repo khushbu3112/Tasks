@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <fieldset style="width: 80%; background-color: cadetblue; color: white;">
+            <h1>Registration form</h1>
+            <form action="">
+                <table style="width:50%" border="2px">
+                    <tr>
+                        <td> <label for=""> Enter your first name</label></td>
+                        <td><input type="text" placeholder="Enter your first name" required></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Enter your last name</label></td>
+                        <td><input type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Enter your Password</label></td>
+                        <td><input type="password" pattern="[0-9]{2,8}"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> ReEnter your Password</label></td>
+                        <td><input type="password" pattern="[0-9]{2,8}"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Enter your email</label></td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Enter your mobile</label></td>
+                        <td><input type="tel"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Enter your address</label></td>
+                        <td><textarea name="" id="" cols="30" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Select your Gender</label></td>
+                        <td>Male<input type="radio" name="radio"> Female
+                            <input type="radio" name="radio">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Select your hobbies</label></td>
+                        <td>hobby1<input type="checkbox"> hobby2
+                            <input type="checkbox"> hobby3
+                            <input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for=""> Select your DOB</label></td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Select your country
+                            <td><select name="country" id="">
+                        
+                            
+                            <option selected="selected" disabled="disabled" >Select your country</option>
+                            <option value="1" >India</option>
+                            <option value="2" >Australia</option>
+                            
+                        </td>
+                        </select> </td>
+                    </tr>
+                    <tr>
+                        <td>Upload your pic</td>
+                        <td><input type="file" placeholder="choose file" multiple></td>
+                    </tr>
+                    <tr>
+
+                        <td><input type="submit" value="Save my data">
+                            <input type="reset" value="reset data"></td>
+
+                    </tr>
+                </table>
+            </form>
+        </fieldset>
+    </center>
+</body>
+
+</html>
