@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfunction() {
+            document.getElementById("para").style.fontSize = "30px";
+            document.getElementById("para").style.border = "double red";
+            document.getElementById("para").style.Color = "black";
+            document.getElementById("para").style.backgroundColor = "gray";
+
+        }
+
+        function myimg() {
+            document.getElementById("img").style.width = "500px";
+
+            document.getElementById("img").style.border = "solid";
+        }
+
+        function myimg2() {
+            document.getElementById("img").style.width = "300px";
+
+            document.getElementById("img").style.border = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <input type="submit" name="submit" value="click here" ondblclick="myfunction()">
+    <p id="para" style="color:blue">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet adipisci quidem odio consequatur labore necessitatibus ut. Aspernatur eius quam dolore quibusdam odit harum eum iure alias? Repellendus rerum suscipit culpa! Aut culpa id, illum ipsum
+        veritatis magni, iusto necessitatibus beatae, officia doloribus porro. Odio culpa a veniam error nobis, at repellendus aspernatur. Cumque inventore rerum sed, recusandae eius praesentium rem. Consequuntur accusantium beatae dolorum magni nemo
+        voluptatem laudantium. Incidunt eum fuga iusto hic nam ea fugiat qui nisi earum est. Dolores rem nam magni tenetur adipisci, similique nihil numquam deleniti.</p>
+    <img src="https://picsum.photos/id/237/200/300" id="img" onmouseover="myimg()" onmouseout="myimg2()" alt="">
+</body>
+
+</html>

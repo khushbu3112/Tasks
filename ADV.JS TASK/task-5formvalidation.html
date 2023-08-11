@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validdate(str) {
+            var fname = document.getElementById("fname").value;
+            if (fname == "" || fname == null) {
+                alert('first name is required');
+                return false;
+            }
+            var lname = document.getElementById("lname").value;
+            if (lname == "" || lname == null) {
+                alert('last name is required');
+                return false;
+            }
+            var pass = document.forms["myform"]["pass"].value;
+            if (pass == "" || pass == null) // for null condition
+            {
+                alert('Please fill out the password'); // alert msg,
+                return false; //return false means msg show and again on same page with value not refresh page
+            }
+
+            if (!(pass.length >= 3 && pass.length <= 8)) {
+                alert('Please,provide min 3 & max 8 char in password');
+                return false;
+            }
+            var cpass = document.forms["myform"]["cpass"].value;
+            if (cpass == "" || cpass == null) // for null condition
+            {
+                alert('Please fill out the confirm password'); // alert msg
+                return false; //return false means msg show and again on same page with value not refresh page
+            }
+
+            if (pass == cpass) {} else {
+                alert('Please enter same password'); // alert msg
+                return false; //return false means msg show and again on same page with value not refresh page
+            }
+            var email = document.forms["myform"]["email"].value;
+            if (email == "" || email == null) // for null condition
+            {
+                alert('Please fill out the email'); // alert msg
+                return false; //return false means msg show and again on same page with value not refresh page
+            }
+
+            var mail = /^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+            if (!mail.test(email)) {
+                alert('Please fill proper email id'); // alert msg
+                return false; //return false means msg show and again on same page with value not refresh page
+
+            }
+            var pno = document.forms["myform"]["pno"].value;
+            if (pno == "" || pno == null) // for null condition
+            {
+                alert('Please fill out the phone number'); // alert msg
+                return false; //return false means msg show and again on same page with value not refresh page
+            }
+
+            var phone = /^[0-9]{10,11}$/;
+            if (!phone.test(pno)) {
+                alert('Please fill only 10 digits in Phone number'); // alert msg
+                return false; //return false means msg show and again on same page with value not refresh page
+
+            }
+            var gen_arr = document.getElementsByName("gender");
+            if (gen_arr[0].checked == true) {
+
+            } else if (gen_arr[1].checked == true) {
+
+            } else {
+                alert('! Please Select Gender'); // alert msg
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: rgb(32, 32, 81);">
+    <form name="myform" method="" onsubmit="return validdate()">
+
+        <table border="1" align="center" style="height: 500px; width: 40%; background-color: bisque;">
+            <h1 align="center" style="color: white;">Registration Form</h1>
+            <tr>
+                <th>First Name:</th>
+                <td>
+                    <input type="text" id="fname" name="fname">
+                </td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td>
+                    <input type="text" id="lname" name="lname">
+                </td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>
+                    <input type="text" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td>
+                    <input type="password" name="pass" id="pass">
+                </td>
+            </tr>
+            <tr>
+                <th>Confirm Password:</th>
+                <td>
+                    <input type="password" name="cpass" id="cpass">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Mobile:</th>
+                <td>
+                    <input type="text" name="pno" id="phone">
+                </td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><textarea name="" id="" cols="40" rows="7" name="address"></textarea></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td><input type="radio" name="gender" id="gender">Female
+                    <input type="radio" name="gender" id="gender">Male</td>
+            </tr>
+            <tr>
+                <th>Langauge Known:</th>
+                <td><input type="checkbox" name="check" id="check">Gujarati
+                    <input type="checkbox" name="check" id="check">Hindi
+                    <input type="checkbox" name="check" id="check">English
+                    <input type="checkbox" name="check" id="check">Maths
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" name="submit" value="submit"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

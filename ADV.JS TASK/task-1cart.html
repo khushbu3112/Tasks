@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            height: 200px;
+            width: 100%;
+            background-color: cadetblue;
+        }
+        
+        .container .main1 img {
+            margin-top: 20px;
+            margin-left: 10%;
+        }
+        
+        .container .main1 {
+            display: flex;
+        }
+        
+        input {
+            height: 20px;
+            width: 30px;
+            margin-top: 5%;
+        }
+        
+        #pl {
+            margin-left: 10%;
+        }
+        
+        span {
+            margin-top: 5%;
+            color: white;
+            padding: 1px 20px;
+        }
+        
+        pre {
+            color: white;
+            margin-top: 5%;
+        }
+        
+        p {
+            margin-left: 20%;
+            margin-top: 5%;
+            color: white;
+        }
+        
+        button {
+            height: 30px;
+            width: 100px;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main1">
+            <img src="https://cpimg.tistatic.com/07383972/b/4/Ladies-Pink-One-Piece-Dresses.jpg" height="150" width="150" alt="">
+            <pre>
+                Ladies Pink One Piece Dresses
+                Brand: SUNDRA IMPEX
+            </pre>
+
+            <input type="submit" value="+" id="pl" onclick="plus()">
+            <span id="cart">1</span>
+            <input type="submit" value="-" onclick="minus()">
+            <p>₹450</p>
+            <button>Add To Cart</button>
+        </div>
+    </div>
+    <script>
+        function plus() {
+            var value = document.getElementById('cart').innerHTML;
+            value++;
+            document.getElementById('cart').innerHTML = value;
+        }
+
+        function minus() {
+            var value = document.getElementById('cart').innerHTML;
+            value--;
+            document.getElementById('cart').innerHTML = value;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // get all data 
+        const fetchdata = () => {
+            fetch('https://jsonplaceholder.typicode.com/todos')
+                .then(response => response.json())
+                .then((data) => {
+                    console.log(data)
+                })
+        }
+
+
+
+        // get single data by id 
+        const fetchsingle = () => {
+            fetch('https://jsonplaceholder.typicode.com/todos/2')
+                .then(response => response.json())
+                .then((data) => {
+                    console.log(data)
+                })
+        }
+
+
+        // get perticuler column data by column 
+        const fetchcolumn = () => {
+            fetch('https://jsonplaceholder.typicode.com/todos?name=khushbu')
+                .then(response => response.json())
+                .then((data) => {
+                    console.log(data)
+                })
+        }
+
+
+        // delete data 
+        const ondelete = () => {
+            fetch('https://jsonplaceholder.typicode.com/todos/2', {
+                    method: 'DELETE',
+
+                })
+                .then((response) => {
+
+                })
+        }
+
+
+        // insert data 
+        const insert = () => {
+            fetch('https://jsonplaceholder.typicode.com/todos', {
+                method: 'POST',
+                body: json.stringify(object),
+                Headers: {
+                    'content-type': 'spplication/json; charset=UTF-8',
+                },
+
+            })
+
+            .then(response => response.json())
+                .then((object) => {
+                    console.log(object)
+                })
+        }
+
+        // update data 
+        const onupdate = () => {
+            fetch('https://jsonplaceholder.typicode.com/todos/1', {
+                method: 'PATCH',
+                body: json.stringify(object),
+                Headers: {
+                    'content-type': 'spplication/json; charset=UTF-8',
+                },
+
+            })
+
+            .then(response => response.json())
+                .then((object) => {
+                    console.log(object)
+                })
+        }
+    </script>
+</body>
+
+</html>

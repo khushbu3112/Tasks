@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Products</title>
+</head>
+
+<body>
+    <table border="1" id="data"></table>
+
+    <script>
+        axios.get("https://jsonplaceholder.typicode.com/photos").then((res) => {
+            // console.log(res.data);
+            showall(res.data)
+        });
+
+        function showall(myobject) {
+            const data = document.getElementById("data");
+            for (const myData of myobject) {
+                const html = `
+            <tr>
+                <td>${myData.id}</td>
+                <td>${myData.title}</td>
+                <td>${myData.thumbnailUrl}</td>
+                </tr>
+            `;
+                data.insertAdjacentHTML('beforeend', html)
+            }
+        }
+    </script>
+    </body>
+
+</html>

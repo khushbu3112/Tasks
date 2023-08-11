@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //   get all data 
+        const fetchall = async() => {
+            const res = await axios.get('https://jsonplaceholder.typicode.com/users')
+                // .then((res) => {
+                //     console.log(res.data);
+                // });
+
+        }
+
+
+        //   get single data by id
+        const fetchsingle = async() => {
+            const res = await axios.get('https://jsonplaceholder.typicode.com/users/2')
+        }
+
+
+        // get perticuler column data by column 
+        const fetchcolumn = async() => {
+            const res = await axios.get('https://jsonplaceholder.typicode.com/users?category=men')
+        }
+
+        //delete data by id
+        const fetchdelete = async() => {
+            const res = await axios.delete('https://jsonplaceholder.typicode.com/users/2')
+        }
+
+
+        // insert data 
+        const insert = async() => {
+            const res = await axios.post('https://jsonplaceholder.typicode.com/users/', Object)
+        }
+        const update = async() => {
+            const res = await axios.patch('https://jsonplaceholder.typicode.com/users/1', Object)
+        }
+    </script>
+
+</body>
+
+</html>
